@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import { Button } from '@mui/material'
 
 export default function Home() {
   return (
@@ -63,7 +64,24 @@ export default function Home() {
           </h2>
           <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
         </a>
-
+        <Button
+          disableRipple
+          disableFocusRipple
+          variant="outlined"
+          color="info"
+          size="small"
+          sx={{
+            p: '10px',
+            border: '1px solid #fff',
+            color: '#fff',
+            minWidth: '100px',
+            '&:hover': {
+              border: '1px solid #fff'
+            }
+          }}
+        >
+          Cancel
+        </Button>
         <a
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
